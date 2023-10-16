@@ -23,7 +23,7 @@ namespace Business.Concrete
         {
             //iş kodları
             // yetkisi var mı? 
-            return productDal.GetAll();
+            return productDal.GetAll(p => p.CategoryID == 2);
         }
     }
 }
