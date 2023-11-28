@@ -7,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Abstract
+namespace Business.Abstract;
+
+public interface ICarService
 {
-    public interface ICarService
-    {
 
-        IDataResult<List<Car>> GetAll();
-        IDataResult<List<Car>> GetAllByBrandID(int id);
-        IDataResult<List<Car>> GetByDailyPrice(decimal min, decimal max);
-        IDataResult<List<CarDetailDto>> GetCarDetails();
-        IDataResult<Car> GetById(int CarID);
+    IDataResult<List<Car>> GetAll();
+    IDataResult<List<Car>> GetAllByBrandID(int id);
+    IDataResult<List<Car>> GetByDailyPrice(decimal min, decimal max);
+    IDataResult<List<CarDetailDto>> GetCarDetails();
+    IDataResult<Car> GetById(int CarID);
 
-        IResult Add(Car car);
-    }
+    IResult Add(Car car);
 }

@@ -8,8 +8,8 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            carTest();
-            //brandTest();
+            //carTest();
+            brandTest();
             //RentalTest();
         }
 
@@ -29,7 +29,7 @@ namespace ConsoleUI
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             foreach (var brand in brandManager.GetAll())
             {
-                Console.WriteLine(brand.BrandName);
+                Console.WriteLine(brand.BrandID + " - " + brand.BrandName);
             }
         }
 
