@@ -10,10 +10,12 @@ namespace Entities.Concrete
 {
     public class CarImage : IEntity
     {
+        public DateTime Date;
+
         [Key]
         public int CarImageID { get; set; }
         public int CarID { get; set; }
-        public string? ImagePath { get; set; }
-        public DateTime ImageDate { get; set; }
+        public string ImagePath { get; set; }
+        public DateTime? ImageDate { get; set; }
     }
 }

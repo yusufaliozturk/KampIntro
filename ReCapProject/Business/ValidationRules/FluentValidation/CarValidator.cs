@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Business.ValidationRules.FluentValidation
 {
-    internal class CarValidator : AbstractValidator<Car>
+    public class CarValidator : AbstractValidator<Car>
     {
         public CarValidator()
         {
@@ -23,7 +23,7 @@ namespace Business.ValidationRules.FluentValidation
             //Ürün isimleri 'A' ile başlaması için 
         }
 
-        private bool StartWithA(string arg)
+        public bool StartWithA(string arg)
         {
             return arg.StartsWith("A");
         }

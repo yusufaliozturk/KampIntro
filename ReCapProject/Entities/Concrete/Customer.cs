@@ -11,6 +11,6 @@ namespace Entities.Concrete
     public class Customer : IEntity
     {
         public int UserID { get; set; }
-        public string? CompanyName { get; set; }
+        public string CompanyName { get; set; }
     }
 }

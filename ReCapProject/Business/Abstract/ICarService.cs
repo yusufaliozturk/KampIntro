@@ -17,6 +17,6 @@ public interface ICarService
     IDataResult<List<Car>> GetByDailyPrice(decimal min, decimal max);
     IDataResult<List<CarDetailDto>> GetCarDetails();
     IDataResult<Car> GetById(int CarID);
-
+    IResult Update(Car car);
     IResult Add(Car car);
 }

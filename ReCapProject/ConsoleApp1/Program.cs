@@ -27,7 +27,7 @@ namespace ConsoleUI
         private static void brandTest()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            foreach (var brand in brandManager.GetAll())
+            foreach (var brand in brandManager.GetAll().Data)
             {
                 Console.WriteLine(brand.BrandID + " - " + brand.BrandName);
             }
@@ -35,7 +35,7 @@ namespace ConsoleUI
 
         private static void carTest()
         {
-            CarManager carManager = new(new EfCarDal());
+            CarManager carManager = new(new EfCarDal(), new BrandManager(new EfBrandDal()));
 
             var result = carManager.GetCarDetails();
 
